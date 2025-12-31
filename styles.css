@@ -1,0 +1,77 @@
+:root {
+  --primary: #00d4ff;
+  --secondary: #8b5cf6;
+  --accent: #fbbf24;
+  --dark-bg: #0a0e27;
+  --card-bg: #131829;
+  --card-glow: rgba(0, 212, 255, 0.1);
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+}
+
+body {
+  font-family: 'Syne', sans-serif;
+  background: var(--dark-bg);
+  color: var(--text-primary);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+nav button {
+  margin-left: 10px;
+  background: var(--primary);
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.page {
+  padding: 40px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.answer {
+  margin-top: 20px;
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Animated grid & orbs (same as previous) */
+.grid-background {
+  position: fixed;
+  top:0; left:0; width:100%; height:100%;
+  background-image: linear-gradient(rgba(0,212,255,0.03)1px,transparent 1px),
+                    linear-gradient(90deg, rgba(0,212,255,0.03)1px, transparent 1px);
+  background-size:60px 60px;
+  animation:gridMove 20s linear infinite;
+  z-index:0; pointer-events:none;
+}
+@keyframes gridMove{0%{transform:translate(0,0)}100%{transform:translate(60px,60px)}}
+.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:0.3;animation:float 20s infinite ease-in-out;z-index:1;pointer-events:none}
+.orb1{width:400px;height:400px;background:radial-gradient(circle,var(--primary),transparent);top:10%;left:5%;animation-delay:0s;}
+.orb2{width:350px;height:350px;background:radial-gradient(circle,var(--secondary),transparent);top:60%;right:10%;animation-delay:5s;}
+.orb3{width:300px;height:300px;background:radial-gradient(circle,var(--accent),transparent);bottom:20%;left:30%;animation-delay:10s;}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(50px,-50px) scale(1.1)}66%{transform:translate(-30px,30px) scale(0.9)}}
