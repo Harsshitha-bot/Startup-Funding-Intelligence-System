@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+Startup Funding Intelligence System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Startup Funding Intelligence System is a multilingual, AI-powered platform designed to ingest, process, and deliver startup funding insights in India. It leverages RAG (Retrieval-Augmented Generation), vector databases, and multilingual NLP to provide grounded, context-aware answers to user queries.
 
-## Available Scripts
+The workflow is divided into two main phases: Data Preparation & Storage, and Query Processing & Response Generation.
+Data Preparation & Storage
 
-In the project directory, you can run:
+1. Data Sources
+Funding databases (CSV, Excel)
+Government policy portals
+Startup reports (PDFs)
+News articles & blogs
+Web pages / APIs
 
-### `npm start`
+2. Data Ingestion & Extraction
+API crawlers and web scrapers
+PDF parsing + OCR
+Table extraction
+Language detection
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Data Cleaning & Normalization
+Remove duplicates and noisy entries
+Standardize names (investors, startups)
+Normalize dates, amounts, sectors
+Metadata tagging (source, region)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Text Processing & Semantic Chunking
+Split documents into meaningful chunks
+Round-wise or policy-wise chunking
+Preserve context boundaries
 
-### `npm test`
+5. Multilingual Embedding Generation
+Indic-capable embedding models
+Language-agnostic vector representations
+Same semantic meaning mapped to same space
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. Storage Layer
+Vector Database: Stores embeddings for fast semantic search
+Document Store: Stores raw text, metadata, and source references
 
-### `npm run build`
+7. Query Processing & Response Generation
+User Query Interface
+Users can query in English or any supported Indian language
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+8. Query Understanding Module
+Language detection
+Translation
+Query embedding generation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+9. Semantic Retrieval Engine
+Vector similarity search (Top-K results)
+Context ranking and filtering
+Cross-language matching
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+10.RAG Engine
+Inputs: User query + retrieved context chunks + source metadata
+Outputs: Grounded, concise natural language answers
 
-### `npm run eject`
+11. Insight & Reasoning Layer
+Funding trend analysis
+Investor profiling
+Policy relevance mapping
+Region/sector-specific reasoning
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+12. Response Post-Processing
+Simplify language for readability
+Generate bullet-point insights
+Attach source citations
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+13.API & Frontend Layer
+FastAPI backend serves queries
+React-based multilingual UI with search bar and insight cards
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+14. Users, Feedback & Continuous Learning
+Users: Startup founders, students, researchers, incubators
+Feedback used for tuning retrieval, embeddings, and AI models
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Usage
 
-## Learn More
+Open the web interface.
+Select your preferred language.
+Enter a funding-related query
+Submit query → instant AI-generated or static answer.
+Explore insights via insight cards and source references.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Tech Stack
+Backend: Python, FastAPI, Uvicorn
+Frontend: React, JavaScript, CSS
+AI Layer: RAG Engine + Multilingual LLM
+Vector DB: Semantic embeddings for fast retrieval
+Data Sources: CSV, PDFs, Web APIs
