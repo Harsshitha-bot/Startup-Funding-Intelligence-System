@@ -1,11 +1,11 @@
-# 🚀 Startup Funding Intelligence System
+#  Startup Funding Intelligence System
 
 Startup Funding Intelligence System is a **multilingual, AI-powered platform** designed to **ingest, process, and deliver startup funding insights in India**.  
 It leverages **RAG (Retrieval-Augmented Generation)**, **vector databases**, and **multilingual NLP** to provide grounded, context-aware answers to user queries.
 
 ---
 
-## 🗂️ Workflow
+##  Workflow
 
 The workflow is divided into **two main phases**: **Data Preparation & Storage**, and **Query Processing & Response Generation**.
 
@@ -86,7 +86,7 @@ The workflow is divided into **two main phases**: **Data Preparation & Storage**
 
 ---
 
-## 🖥️ Usage
+##  Usage
 
 1. Open the web interface.  
 2. Select your preferred language.  
@@ -96,7 +96,7 @@ The workflow is divided into **two main phases**: **Data Preparation & Storage**
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 - **Backend:** Python, FastAPI, Uvicorn  
 - **Frontend:** React, JavaScript, CSS  
